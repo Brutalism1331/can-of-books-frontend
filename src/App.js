@@ -7,6 +7,8 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { withAuth0 } from '@auth0/auth0-react';
+// import axios from 'axios';
 
 class App extends React.Component {
 
@@ -31,4 +33,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default withAuth0(App);
