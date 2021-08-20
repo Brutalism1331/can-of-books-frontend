@@ -19,13 +19,13 @@ class App extends React.Component {
   render() {
 
     console.log('props', this.props.auth0);
-    const { user, isLoading, isAuthenticated } = this.props.auth0;
+    const { isLoading, isAuthenticated } = this.props.auth0;
 
     return (
       <>
         <Router>
           <IsLoadingAndError>
-            <Header isAuthenticated = {isAuthenticated} />
+            <Header />
             <Switch>
               <Route exact path="/">
                 {/* TODO: if the user is logged in, render the `BestBooks` component, if they are not, render the `Login` component */}
