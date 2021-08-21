@@ -1,3 +1,17 @@
 .jumbotron{
   margin-bottom: 0;
 }
+
+img
+{
+   width: 30%;
+   float: right;
+   padding-right: 15%;
+   padding-left: 1rem;
+
+}
+
+.text {
+  color: black;
+  padding-right: 1rem;
+}

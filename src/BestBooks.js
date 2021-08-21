@@ -43,7 +43,7 @@ class MyFavoriteBooks extends React.Component {
 
               <img src="https://via.placeholder.com/150" alt="placeHolder" />
 
-              <Carousel.Caption>
+              <Carousel.Caption className="text">
 
                 <h3>{x.title}</h3>
                 <p>{x.description}</p>
