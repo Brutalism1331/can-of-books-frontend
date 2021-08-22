@@ -2,8 +2,10 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './BestBooks.css';
 import { withAuth0 } from "@auth0/auth0-react";
+import Carousel from 'react-bootstrap/Carousel'
 import axios from 'axios';
-
+import { Jumbotron } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 class MyFavoriteBooks extends React.Component {
 
@@ -30,10 +32,30 @@ class MyFavoriteBooks extends React.Component {
     })
   }
   render() {
-    console.log(this.state)
+    console.log('booksArr', this.state.booksArr);
     return (
       <>
-        <h4>BestBooks Component Is Working</h4>
+
+        <Jumbotron>
+
+          {this.state.booksArr.length > 0 ? <Carousel>{this.state.booksArr.map(x => (
+            <Carousel.Item key={x._id}>
+
+              <img src="https://via.placeholder.com/150" alt="placeHolder" />
+
+              <Carousel.Caption className="text">
+
+                <h3>{x.title}</h3>
+                <p>{x.description}</p>
+
+              </Carousel.Caption>
+            </Carousel.Item>
+          ))}
+          </Carousel>
+            : ''}
+
+        </Jumbotron>
+
       </>
     );
   }
